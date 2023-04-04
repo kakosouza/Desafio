@@ -1,0 +1,19 @@
+package model.entities;
+
+public class Fornecedor {
+
+	private String chave;
+	private String nome; 
+	private Integer rg; 
+	private String dtNasc;
+	private String email;
+	private String cep;
+	private String lograd; 
+	private Integer num; 
+	private String compl; 
+	private String cidade;
+	private String bairro;
+	private String estado;
+	
+	
+}

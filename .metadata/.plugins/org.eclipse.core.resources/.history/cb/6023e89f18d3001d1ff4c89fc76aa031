@@ -1,0 +1,16 @@
+package model.entities;
+
+public class Empresa {
+	
+	private String cnpj; 
+	private String fantasia; 
+	private String cep;
+	private String lograd; 
+	private Integer num; 
+	private String compl; 
+	private String cidade;
+	private String bairro;
+	private String estado;
+	
+
+}

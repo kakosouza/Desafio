@@ -1,0 +1,33 @@
+package model.entities;
+
+public class Empresa {
+	
+	private String cnpj; 
+	private String fantasia; 
+	private String cep;
+	private String lograd; 
+	private Integer num; 
+	private String compl; 
+	private String cidade;
+	private String bairro;
+	private String estado;
+	
+	public Empresa() {
+	}
+	
+	public Empresa(String cnpj, String fantasia, String cep, String lograd, Integer num, String compl, String cidade,
+			String bairro, String estado) {
+		super();
+		this.cnpj = cnpj;
+		this.fantasia = fantasia;
+		this.cep = cep;
+		this.lograd = lograd;
+		this.num = num;
+		this.compl = compl;
+		this.cidade = cidade;
+		this.bairro = bairro;
+		this.estado = estado;
+	}
+	
+	
+}

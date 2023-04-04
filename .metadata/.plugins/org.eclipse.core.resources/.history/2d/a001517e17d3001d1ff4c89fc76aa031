@@ -1,0 +1,38 @@
+package model.entities;
+
+public class Fornecedor {
+
+	private String chave;
+	private String nome; 
+	private Integer rg; 
+	private String dtNasc;
+	private String email;
+	private String cep;
+	private String lograd; 
+	private Integer num; 
+	private String compl; 
+	private String cidade;
+	private String bairro;
+	private String estado;
+	
+	public Fornecedor() {
+	}
+	
+	public Fornecedor(String chave, String nome, Integer rg, String dtNasc, String email, String cep, String lograd,
+			Integer num, String compl, String cidade, String bairro, String estado) {
+		this.chave = chave;
+		this.nome = nome;
+		this.rg = rg;
+		this.dtNasc = dtNasc;
+		this.email = email;
+		this.cep = cep;
+		this.lograd = lograd;
+		this.num = num;
+		this.compl = compl;
+		this.cidade = cidade;
+		this.bairro = bairro;
+		this.estado = estado;
+	}
+	
+	
+}

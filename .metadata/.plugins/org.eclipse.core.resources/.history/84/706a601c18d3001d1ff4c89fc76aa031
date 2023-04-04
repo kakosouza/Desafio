@@ -1,0 +1,162 @@
+package model.entities;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Fornecedor implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private String chave;
+	private String nome; 
+	private Integer rg; 
+	private String dtNasc;
+	private String email;
+	private String cep;
+	private String lograd; 
+	private Integer num; 
+	private String compl; 
+	private String cidade;
+	private String bairro;
+	private String estado;
+	
+	public Fornecedor() {
+	}
+	
+	public Fornecedor(String chave, String nome, Integer rg, String dtNasc, String email, String cep, String lograd,
+			Integer num, String compl, String cidade, String bairro, String estado) {
+		this.chave = chave;
+		this.nome = nome;
+		this.rg = rg;
+		this.dtNasc = dtNasc;
+		this.email = email;
+		this.cep = cep;
+		this.lograd = lograd;
+		this.num = num;
+		this.compl = compl;
+		this.cidade = cidade;
+		this.bairro = bairro;
+		this.estado = estado;
+	}
+
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Integer getRg() {
+		return rg;
+	}
+
+	public void setRg(Integer rg) {
+		this.rg = rg;
+	}
+
+	public String getDtNasc() {
+		return dtNasc;
+	}
+
+	public void setDtNasc(String dtNasc) {
+		this.dtNasc = dtNasc;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getLograd() {
+		return lograd;
+	}
+
+	public void setLograd(String lograd) {
+		this.lograd = lograd;
+	}
+
+	public Integer getNum() {
+		return num;
+	}
+
+	public void setNum(Integer num) {
+		this.num = num;
+	}
+
+	public String getCompl() {
+		return compl;
+	}
+
+	public void setCompl(String compl) {
+		this.compl = compl;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cep, chave, nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Fornecedor other = (Fornecedor) obj;
+		return Objects.equals(cep, other.cep) && Objects.equals(chave, other.chave) && Objects.equals(nome, other.nome);
+	}
+
+	@Override
+	public String toString() {
+		return "Fornecedor [chave=" + chave + ", nome=" + nome + ", rg=" + rg + ", dtNasc=" + dtNasc + ", email="
+				+ email + ", cep=" + cep + ", lograd=" + lograd + ", num=" + num + ", compl=" + compl + ", cidade="
+				+ cidade + ", bairro=" + bairro + ", estado=" + estado + "]";
+	}
+	
+	
+}

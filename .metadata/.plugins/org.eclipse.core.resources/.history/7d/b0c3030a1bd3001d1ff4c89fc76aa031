@@ -24,7 +24,7 @@ public class Fornecedor implements Serializable{
 	public Fornecedor() {
 	}
 	
-	public Fornecedor(String chave, String nome, Integer rg, Date dtNasc, String email, String cep, String lograd,
+	public Fornecedor(String chave, String nome, Integer rg, String dtNasc, String email, String cep, String lograd,
 			Integer num, String compl, String cidade, String bairro, String estado) {
 		this.chave = chave;
 		this.nome = nome;
@@ -39,8 +39,6 @@ public class Fornecedor implements Serializable{
 		this.bairro = bairro;
 		this.estado = estado;
 	}
-
-
 
 	public String getChave() {
 		return chave;
@@ -66,9 +64,8 @@ public class Fornecedor implements Serializable{
 		this.rg = rg;
 	}
 
-	
-	public Date getDtNasc() {
-		return dtNasc;
+	public String getDtNasc() {
+		return  dtNasc;
 	}
 
 	public void setDtNasc(Date dtNasc) {

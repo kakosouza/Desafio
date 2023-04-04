@@ -1,0 +1,21 @@
+package application;
+
+import model.entities.Empresa;
+import model.entities.Fornecedor;
+
+public class FornEmp {
+	
+	private Fornecedor fornecedor;
+	private Empresa empresa;
+	
+	public FornEmp() {
+	}
+
+	public FornEmp(Fornecedor fornecedor, Empresa empresa) {
+		this.fornecedor = fornecedor;
+		this.empresa = empresa;
+	}
+	
+	
+
+}

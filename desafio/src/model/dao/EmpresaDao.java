@@ -8,7 +8,8 @@ public interface EmpresaDao {
 
 	void insert(Empresa obj);
 	void update(Empresa obj);
-	void deleteByCnpj(String cnpj);
-	Empresa findByCnpj(String cnpj);
+	void deleteById(String cnpj);
+	
+	Empresa findById(String cnpj);
 	List<Empresa> findAll();	
 }

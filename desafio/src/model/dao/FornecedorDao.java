@@ -8,7 +8,8 @@ public interface FornecedorDao {
 
 	void insert(Fornecedor obj);
 	void update(Fornecedor obj);
-	void deleteByChave(String chave);
-	Fornecedor findByChave(String chave);
+	void deleteById(String chave);
+	
+	Fornecedor findById(String chave);
 	List<Fornecedor> findAll();	
 }

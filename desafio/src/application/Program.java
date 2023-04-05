@@ -8,10 +8,11 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		Fornecedor forn = new Fornecedor("999999999", null, null, null, null, null, null, null, null, null, null, null);
-		System.out.println(forn);
-		
 		FornecedorDao fornecedorDao = DaoFactory.createFornecedorDao();
+		
+		Fornecedor forn = fornecedorDao.findById("00011111111111");
+		
+		System.out.println(forn);
 	}
 
 }

@@ -20,13 +20,13 @@ public class EmpresaDaoJDBC implements EmpresaDao{
 	}
 
 	@Override
-	public void deleteByCnpj(String cnpj) {
+	public void deleteById(String cnpj) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Empresa findByCnpj(String cnpj) {
+	public Empresa findById(String cnpj) {
 		// TODO Auto-generated method stub
 		return null;
 	}

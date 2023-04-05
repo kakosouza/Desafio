@@ -1,0 +1,63 @@
+package model.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+
+import model.dao.FornecedorDao;
+import model.entities.Fornecedor;
+
+public class FornecedorDaoJDBC implements FornecedorDao {
+	
+	private Connection conn;
+	
+	public FornecedorDaoJDBC(Connection conn) {
+		this.conn = conn;
+	}
+
+	@Override
+	public void insert(Fornecedor obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Fornecedor obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteByChave(String chave) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Fornecedor findByChave(String chave) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+			st = conn.prepareStatement(
+					"SELECT * "
+					+ "FROM fornecedor "
+					+ "WHERE fornecedor.Chave = ?");
+			
+			st.setString(1, chave);
+			rs = st.executeQuery();
+			//Testo para ver se veio algum resultado da query
+			if (rs.next()) {
+				Fornecedor forn = new Fornecedor();
+				forn.setChave(rs.getString("Chave"));
+			}
+		}
+	
+	}
+
+	@Override
+	public List<Fornecedor> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

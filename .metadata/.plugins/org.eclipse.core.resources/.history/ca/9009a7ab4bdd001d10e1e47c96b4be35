@@ -17,13 +17,13 @@ public class Empresa implements Serializable{
 	private String bairro;
 	private String estado;
 	
-	private Fornecedor fornecedor;
+	private EmprForn fornecedor;
 	
 	public Empresa() {
 	}
 	
 	public Empresa(String cnpj, String fantasia, String cep, String lograd, Integer num, String compl, String cidade,
-			String bairro, String estado, Fornecedor fornecedor) {
+			String bairro, String estado, EmprForn fornecedor) {
 		this.cnpj = cnpj;
 		this.fantasia = fantasia;
 		this.cep = cep;
@@ -35,7 +35,6 @@ public class Empresa implements Serializable{
 		this.estado = estado;
 		this.fornecedor = fornecedor;
 	}
-
 
 	public String getCnpj() {
 		return cnpj;
@@ -108,18 +107,10 @@ public class Empresa implements Serializable{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
-	public Fornecedor getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
-	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cnpj);
+		return Objects.hash(cep, cnpj, fantasia);
 	}
 
 	@Override
@@ -131,13 +122,13 @@ public class Empresa implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Empresa other = (Empresa) obj;
-		return Objects.equals(cnpj, other.cnpj);
+		return Objects.equals(cep, other.cep) && Objects.equals(cnpj, other.cnpj)
+				&& Objects.equals(fantasia, other.fantasia);
 	}
 
 	@Override
 	public String toString() {
 		return "Empresa [cnpj=" + cnpj + ", fantasia=" + fantasia + ", cep=" + cep + ", lograd=" + lograd + ", num="
-				+ num + ", compl=" + compl + ", cidade=" + cidade + ", bairro=" + bairro + ", estado=" + estado
-				+ ", fornecedor=" + fornecedor + "]";
+				+ num + ", compl=" + compl + ", cidade=" + cidade + ", bairro=" + bairro + ", estado=" + estado + "]";
 	}
 }

@@ -1,14 +1,18 @@
 package model.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
-public class Empresa implements Serializable{
+public class Fornecedor implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-
-	private String cnpj; 
-	private String fantasia; 
+	
+	private String chave;
+	private String nome; 
+	private Integer rg; 
+	private Date dtNasc;
+	private String email;
 	private String cep;
 	private String lograd; 
 	private Integer num; 
@@ -17,15 +21,16 @@ public class Empresa implements Serializable{
 	private String bairro;
 	private String estado;
 	
-	private Fornecedor fornecedor;
-	
-	public Empresa() {
+	public Fornecedor() {
 	}
 	
-	public Empresa(String cnpj, String fantasia, String cep, String lograd, Integer num, String compl, String cidade,
-			String bairro, String estado, Fornecedor fornecedor) {
-		this.cnpj = cnpj;
-		this.fantasia = fantasia;
+	public Fornecedor(String chave, String nome, Integer rg, Date dtNasc, String email, String cep, String lograd,
+			Integer num, String compl, String cidade, String bairro, String estado) {
+		this.chave = chave;
+		this.nome = nome;
+		this.rg = rg;
+		this.dtNasc = dtNasc;
+		this.email = email;
 		this.cep = cep;
 		this.lograd = lograd;
 		this.num = num;
@@ -33,24 +38,49 @@ public class Empresa implements Serializable{
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.estado = estado;
-		this.fornecedor = fornecedor;
 	}
 
 
-	public String getCnpj() {
-		return cnpj;
+
+	public String getChave() {
+		return chave;
 	}
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
+	public void setChave(String chave) {
+		this.chave = chave;
 	}
 
-	public String getFantasia() {
-		return fantasia;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setFantasia(String fantasia) {
-		this.fantasia = fantasia;
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Integer getRg() {
+		return rg;
+	}
+
+	public void setRg(Integer rg) {
+		this.rg = rg;
+	}
+
+	
+	public Date getDtNasc() {
+		return dtNasc;
+	}
+
+	public void setDtNasc(Date dtNasc) {
+		this.dtNasc = dtNasc;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getCep() {
@@ -108,18 +138,10 @@ public class Empresa implements Serializable{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
-	public Fornecedor getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
-	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cnpj);
+		return Objects.hash(cep, chave, nome);
 	}
 
 	@Override
@@ -130,14 +152,14 @@ public class Empresa implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Empresa other = (Empresa) obj;
-		return Objects.equals(cnpj, other.cnpj);
+		Fornecedor other = (Fornecedor) obj;
+		return Objects.equals(cep, other.cep) && Objects.equals(chave, other.chave) && Objects.equals(nome, other.nome);
 	}
 
 	@Override
 	public String toString() {
-		return "Empresa [cnpj=" + cnpj + ", fantasia=" + fantasia + ", cep=" + cep + ", lograd=" + lograd + ", num="
-				+ num + ", compl=" + compl + ", cidade=" + cidade + ", bairro=" + bairro + ", estado=" + estado
-				+ ", fornecedor=" + fornecedor + "]";
-	}
+		return "Fornecedor [chave=" + chave + ", nome=" + nome + ", rg=" + rg + ", dtNasc=" + dtNasc + ", email="
+				+ email + ", cep=" + cep + ", lograd=" + lograd + ", num=" + num + ", compl=" + compl + ", cidade="
+				+ cidade + ", bairro=" + bairro + ", estado=" + estado + "]";
+	}	
 }

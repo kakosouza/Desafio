@@ -64,6 +64,6 @@ public class EmprForn implements Serializable{
 
 	@Override
 	public String toString() {
-		return "EmprForn [id=" + id + ", Empresa=" + cnpj + ", Fornecedor=" + chave + "]";
+		return "EmprForn [id=" + id + ", cnpj=" + cnpj + ", chave=" + chave + "]";
 	}	
 }

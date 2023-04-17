@@ -21,13 +21,13 @@ public class Fornecedor implements Serializable{
 	private String bairro;
 	private String estado;
 	
-	private Empresa empresa;
+	private Empresa nome_fantasia;
 	
 	public Fornecedor() {
 	}
 	
 	public Fornecedor(String chave, String nome, Integer rg, Date dtNasc, String email, String cep, String lograd,
-			Integer num, String compl, String cidade, String bairro, String estado, Empresa empresa) {
+			Integer num, String compl, String cidade, String bairro, String estado, Empresa nome_fantasia) {
 		this.chave = chave;
 		this.nome = nome;
 		this.rg = rg;
@@ -40,9 +40,8 @@ public class Fornecedor implements Serializable{
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.estado = estado;
-		this.empresa = empresa;
+		this.nome_fantasia = nome_fantasia;
 	}
-
 
 	public String getChave() {
 		return chave;
@@ -141,13 +140,12 @@ public class Fornecedor implements Serializable{
 		this.estado = estado;
 	}
 
-
-	public Empresa getEmpresa() {
-		return empresa;
+	public Empresa getNome_fantasia() {
+		return nome_fantasia;
 	}
 
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
+	public void setNome_fantasia(String string) {
+		this.nome_fantasia = string;
 	}
 
 	@Override
@@ -171,6 +169,6 @@ public class Fornecedor implements Serializable{
 	public String toString() {
 		return "Fornecedor [chave=" + chave + ", nome=" + nome + ", rg=" + rg + ", dtNasc=" + dtNasc + ", email="
 				+ email + ", cep=" + cep + ", lograd=" + lograd + ", num=" + num + ", compl=" + compl + ", cidade="
-				+ cidade + ", bairro=" + bairro + ", estado=" + estado + ", empresa=" + empresa + "]";
+				+ cidade + ", bairro=" + bairro + ", estado=" + estado + ", nome_fantasia=" + nome_fantasia + "]";
 	}
 }

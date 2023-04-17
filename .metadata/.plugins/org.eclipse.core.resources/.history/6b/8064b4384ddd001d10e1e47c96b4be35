@@ -1,0 +1,61 @@
+package model.entities;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class EmprForn implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	private Integer id;
+	private String fornecedor;
+	private String empresa;
+	
+	private Empresa cnpj;
+	private Fornecedor chave;
+	
+	public EmprForn() {
+	}
+
+	public EmprForn(String fornecedor, String empresa, Empresa cnpj, Fornecedor chave) {
+		this.fornecedor = fornecedor;
+		this.empresa = empresa;
+		this.cnpj = cnpj;
+		this.chave = chave;
+	}
+
+
+	public String getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(String fornecedor) {
+		this.fornecedor = fornecedor;
+	}
+
+	public String getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
+	}
+
+	public Empresa getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(Empresa cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public Fornecedor getChave() {
+		return chave;
+	}
+
+	public void setChave(Fornecedor chave) {
+		this.chave = chave;
+	}
+	
+	
+}

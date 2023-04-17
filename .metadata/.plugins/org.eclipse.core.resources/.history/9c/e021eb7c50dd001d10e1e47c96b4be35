@@ -60,7 +60,7 @@ public class FornecedorDaoJDBC implements FornecedorDao {
 			//Testo para ver se veio algum resultado da query
 			if (rs.next()) { 
 				Empresa empr = new Empresa();
-				empr.setFantasia(rs.getString("Empresa"));
+				empr.setFantasia(rs.getString("Nome_Fantasia"));
 				Fornecedor obj = new Fornecedor();
 				obj.setChave(rs.getString("Chave"));
 				obj.setNome(rs.getString("Nome"));

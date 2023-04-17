@@ -21,13 +21,13 @@ public class Fornecedor implements Serializable{
 	private String bairro;
 	private String estado;
 	
-	private Empresa empresa;
+	private Empresa nome_fantasia;
 	
 	public Fornecedor() {
 	}
 	
 	public Fornecedor(String chave, String nome, Integer rg, Date dtNasc, String email, String cep, String lograd,
-			Integer num, String compl, String cidade, String bairro, String estado, Empresa empresa) {
+			Integer num, String compl, String cidade, String bairro, String estado, EmprForn empresa) {
 		this.chave = chave;
 		this.nome = nome;
 		this.rg = rg;
@@ -141,12 +141,11 @@ public class Fornecedor implements Serializable{
 		this.estado = estado;
 	}
 
-
-	public Empresa getEmpresa() {
+	public EmprForn getEmpresa() {
 		return empresa;
 	}
 
-	public void setEmpresa(Empresa empresa) {
+	public void setEmpresa(EmprForn empresa) {
 		this.empresa = empresa;
 	}
 

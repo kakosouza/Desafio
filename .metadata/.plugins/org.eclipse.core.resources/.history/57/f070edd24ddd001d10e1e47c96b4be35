@@ -11,6 +11,7 @@ import db.DbException;
 import model.dao.FornecedorDao;
 import model.entities.Empresa;
 import model.entities.Fornecedor;
+import model.entities.EmprForn;
 
 public class FornecedorDaoJDBC implements FornecedorDao {
 	
@@ -44,23 +45,21 @@ public class FornecedorDaoJDBC implements FornecedorDao {
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-			        "SELECT f.*, e.Nome_Fantasia as Empresa "
+/*			        "SELECT f.*, e.Nome_Fantasia as Empresa "
 			        + "FROM fornecedor f INNER JOIN emprforn a "
 			        + "ON f.Chave = a.idforn "
 			        + "INNER JOIN empresa e "
 			        + "ON e.CNPJ = a.idempr "
-			        + "WHERE f.Chave = ?");
-			
-/*			        "SELECT f.* "
-			        + "FROM fornecedor f "
 			        + "WHERE f.Chave = ?");	*/
+			
+			        "SELECT f.* "
+			        + "FROM fornecedor f "
+			        + "WHERE f.Chave = ?");	
 
 			st.setString(1, chave);
 			rs = st.executeQuery();
 			//Testo para ver se veio algum resultado da query
-			if (rs.next()) { 
-				Empresa empr = new Empresa();
-				empr.setFantasia(rs.getString("Empresa"));
+			if (rs.next()) {
 				Fornecedor obj = new Fornecedor();
 				obj.setChave(rs.getString("Chave"));
 				obj.setNome(rs.getString("Nome"));

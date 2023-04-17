@@ -52,7 +52,7 @@ public class FornecedorDaoJDBC implements FornecedorDao {
 			        + "ON e.CNPJ = a.idempr "
 			        + "WHERE f.Chave = ?");	*/
 			
-			        "SELECT f.* "
+			        "SELECT f.*, e.Nome_Fantasia as Empresa "
 			        + "FROM fornecedor f "
 			        + "WHERE f.Chave = ?");	
 

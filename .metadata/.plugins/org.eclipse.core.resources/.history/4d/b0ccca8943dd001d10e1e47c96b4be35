@@ -14,7 +14,6 @@ public class DB {  //Conexão com o banco de dados
 	
 	private static Connection conn = null;
 	
-	// Conexão com o banco
 	public static Connection pegaConexao() {
 		if (conn == null) {
 			try {
